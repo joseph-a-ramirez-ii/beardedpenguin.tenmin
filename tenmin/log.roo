@@ -2,3 +2,12 @@
 project --topLevelPackage beardedpenguin.tenmin --projectName tenmin --java 6
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-09-27 22:54:39
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-09-27 22:54:49
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-09-27 23:12:45
+persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity --class ~.Timer --testAutomatically
+field string --fieldName message --notNull 
+web mvc setup
+web mvc all --package ~.web
+selenium test --controller beardedpenguin.tenmin.web.TimerController
+perform tests
+perform package
